@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2a61cd">
+  <title>Horas juntos — Ricardo Lino do Santos</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+    :root { --ink:#123f95; --line:rgba(29,86,190,.22); }
+    * { box-sizing:border-box; }
+    body { margin:0; min-width:300px; color:var(--ink); font-family:"DM Sans",Arial,sans-serif; background:radial-gradient(circle at 50% 18%,rgba(206,223,255,.85),transparent 26%),linear-gradient(180deg,#2760cf 0%,#4f81de 24%,#a7c4f3 53%,#eff6ff 100%); }
+    .page { min-height:100svh; overflow:hidden; position:relative; padding:58px clamp(24px,5.6vw,112px) 45px; display:flex; flex-direction:column; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; color:#fff; font-size:clamp(.66rem,.8vw,.83rem); letter-spacing:.04em; text-transform:uppercase; opacity:.94; }
+    .signature { font:500 clamp(1.1rem,1.65vw,1.65rem)/1 "Playfair Display",Georgia,serif; letter-spacing:0; text-transform:none; }
+    main { flex:1; display:grid; place-items:center; padding:8vh 0 5.5vh; }
+    .hero { width:min(100%,1300px); text-align:center; }
+    .eyebrow { font-size:.73rem; letter-spacing:.045em; font-weight:600; text-transform:uppercase; margin:0 0 38px; color:rgba(11,52,135,.82); }
+    h1 { min-height:2.35em; display:grid; place-items:center; font:italic 400 clamp(2.25rem,4.05vw,4.5rem)/1.14 "Playfair Display",Georgia,serif; letter-spacing:-.04em; margin:0 auto; max-width:1120px; color:#123f95; }
+    h1 span { display:inline; }
+    .cursor { display:inline-block; width:2px; height:.9em; margin-left:6px; background:currentColor; vertical-align:-.08em; animation:blink .75s steps(2,start) infinite; }
+    @keyframes blink { 50% { opacity:0; } }
+    .counter-wrap { margin:clamp(56px,8.5vh,105px) 0 0; }
+    .counter { color:#1b59d4; font:400 clamp(5.5rem,12.7vw,13.7rem)/.82 "Playfair Display",Georgia,serif; letter-spacing:-.075em; font-variant-numeric:tabular-nums lining-nums; text-shadow:0 12px 35px rgba(28,77,177,.1); }
+    .counter-label { margin:clamp(19px,2.2vw,30px) 0 0; font-size:clamp(1rem,1.5vw,1.5rem); font-weight:500; color:#124594; }
+    .counter-label strong { font-weight:600; }
+    .ornament { display:flex; align-items:center; justify-content:center; gap:20px; margin:50px auto 0; color:#2765d7; }
+    .ornament::before,.ornament::after { content:""; width:96px; height:1px; background:currentColor; opacity:.28; }
+    .heart { font-size:1.8rem; line-height:1; font-family:Arial,sans-serif; font-weight:400; }
+    .wish { margin:52px 0 0; font:italic 400 clamp(1.2rem,2.05vw,2rem)/1.35 "Playfair Display",Georgia,serif; color:#3763ab; }
+    footer { border-top:1px solid var(--line); padding-top:28px; display:flex; justify-content:space-between; align-items:center; color:#3863a9; font-size:.9rem; }
+    footer p { margin:0; }.closing { font:italic 400 clamp(1.25rem,1.7vw,1.8rem) "Playfair Display",Georgia,serif; color:#1c4d9e; }
+    .sparkle { position:absolute; opacity:.48; color:#dceaff; font:2.5rem/1 Georgia,serif; user-select:none; }.s1{top:27%;left:15%}.s2{top:23%;right:18%;font-size:1.7rem}.s3{top:62%;left:9%;font-size:1.5rem}.s4{top:68%;right:12%;font-size:1.25rem}
+    @media(max-width:650px){.page{padding:28px 20px 24px;min-height:100svh}.topbar{align-items:flex-start;gap:18px}.topbar>:last-child{max-width:145px;text-align:right;line-height:1.35}main{padding:11vh 0 8vh}.eyebrow{margin-bottom:26px}h1{letter-spacing:-.035em}.counter-wrap{margin-top:62px}.counter{font-size:clamp(4.2rem,23vw,7.8rem);letter-spacing:-.08em}.ornament{margin-top:40px}.ornament::before,.ornament::after{width:54px}.wish{margin-top:38px}footer{padding-top:19px;font-size:.75rem}.closing{font-size:1.05rem}.s1,.s2{display:none}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <span class="sparkle s1">✧</span><span class="sparkle s2">✧</span><span class="sparkle s3">✧</span><span class="sparkle s4">✧</span>
+    <header class="topbar"><div class="signature">Ricardo Lino do Santos</div><div>Uma vida de memórias com você</div></header>
+    <main>
+      <section class="hero" aria-labelledby="message">
+        <p class="eyebrow">Pai, cada instante importa</p>
+        <h1 id="message" aria-label="Nós já passamos todo esse tempo juntos, mas espero passar mais"><span id="typed"></span><span class="cursor" aria-hidden="true"></span></h1>
+        <div class="counter-wrap">
+          <div class="counter" id="hours" aria-label="113.958 horas ao lado do meu pai">0</div>
+          <p class="counter-label"><strong>horas ao lado do meu pai</strong><br><span>vivendo, aprendendo e guardando memórias juntos</span></p>
+        </div>
+        <div class="ornament" aria-hidden="true"><span class="heart">♡</span></div>
+        <p class="wish">Que a vida nos dê muitos outros momentos, lado a lado.</p>
+      </section>
+    </main>
+    <footer><p>Feliz aniversário, pai.</p><p class="closing">Com todo o meu amor.</p></footer>
+  </div>
+  <script>
+    (() => {
+      const phrase = 'Nós já passamos todo esse tempo juntos, mas espero passar mais';
+      const typed = document.getElementById('typed');
+      const display = document.getElementById('hours');
+      const target = 113958;
+      const countDuration = 3200;
+      const typeDelay = 1000;
+      const counterDelay = 2000;
+      const typeDuration = countDuration + counterDelay - typeDelay;
+      const format = new Intl.NumberFormat('pt-BR');
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced) { typed.textContent = phrase; display.textContent = format.format(target); return; }
+      function typeLine(now) {
+        const progress = Math.min((now - (start + typeDelay)) / typeDuration, 1);
+        typed.textContent = phrase.slice(0, Math.round(phrase.length * progress));
+        if (progress < 1) requestAnimationFrame(typeLine);
+      }
+      function count(now) {
+        const progress = Math.min((now - (start + counterDelay)) / countDuration, 1);
+        const eased = 1 - Math.pow(1 - progress, 4);
+        display.textContent = format.format(Math.round(target * eased));
+        if (progress < 1) requestAnimationFrame(count);
+      }
+      const start = performance.now();
+      setTimeout(() => requestAnimationFrame(typeLine), typeDelay);
+      setTimeout(() => requestAnimationFrame(count), counterDelay);
+    })();
+  </script>
+</body>
+</html>
